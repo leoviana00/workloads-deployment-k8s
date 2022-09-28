@@ -1,16 +1,18 @@
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: sonar-ingress
-  namespace: default
+  name: sonarqube-ingress
+  namespace: sonarqube
+  anatations:
+     haproxy.org/path-rewrite: "/"
 spec:
   rules:
   - http:
       paths:
-      - path: /
+      - path: /sonar
         pathType: Prefix
         backend:
           service:
-            name: sonar-svc
+            name: sonarqube-service
             port:
               number: 80
