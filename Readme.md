@@ -1,6 +1,14 @@
 ## Project
 
 - Deployment Services Kubernetes
+    - Sonar
+    - Postgresql
+    - PgAdmin
+    - Haproxy Ingress
+
+- Configuração de Balanceador Externo
+
+## Serviços
 
 <h1 align="center">K8s Sonar Postgresql</h1>
 
