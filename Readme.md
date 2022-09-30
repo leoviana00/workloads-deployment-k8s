@@ -11,8 +11,7 @@
 ## Etapas
 0. [Subir um balanceador dockerizado localmente.](/balanceador/Readme.md) 
 1. [Helm Chart Sonarqube.](/helmchart/sonar/Readme.md)
-2. [Deployment Sonarqube.](/helmchart/sonar/Readme.md)
-
+2. [Deployment Sonarqube.](/workload/sonarqube/Readme.md)
 
 ## Serviços
 
