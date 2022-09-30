@@ -8,6 +8,12 @@
 
 - Configuração de Balanceador Externo
 
+## Etapas
+0. [Subir um balanceador dockerizado localmente.](/balanceador/Readme.md) 
+1. [Helm Chart Sonarqube.](/helmchart/sonar/Readme.md)
+2. [Deployment Sonarqube.](/helmchart/sonar/Readme.md)
+
+
 ## Serviços
 
 <h1 align="center">K8s Sonar Postgresql</h1>
@@ -34,9 +40,4 @@
   <img alt="PgAdmin" src="images/pgadmin.png">
 </p>
 
-<h1 align="center">Balanceador Haproxy</h1>
-
-<p align="center">
-  <img alt="Balanceador" src="images/balanceador.png">
-</p>
 
