@@ -3,7 +3,7 @@ kind: Ingress
 metadata:
   name: sonarqube-ingress
   namespace: sonarqube
-  anatations:
+  annotations:
      haproxy.org/path-rewrite: "/"
 spec:
   rules:

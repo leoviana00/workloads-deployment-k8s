@@ -1,0 +1,63 @@
+# SONARQUBE
+# Sonarqube replicas
+replicaCount: 1
+
+# Sonarqube Image
+image:
+  repository: sonarqube
+  tag: 9.6.1-community
+  pullPolicy: IfNotPresent
+
+# Service Sonarqube
+service:
+  type: ClusterIP
+  externalPort: 9000
+  internalPort: 9000
+  labels:
+  annotations: {}
+
+# Sonarquebe Ingress
+ingress:
+  enabled: true
+  hosts:
+    - name: sonarqube.raj.ninja
+      path: /
+      serviceName: sonarqube-sonarqube
+      servicePort: 9000
+  annotations: {}
+
+# POSTGRESQL
+# Postgres configurations
+postgresql:
+  enabled: true
+  postgresqlUsername: "sonarUser"
+  postgresqlPassword: "sonarPass"
+  postgresqlDatabase: "sonarDB"
+  
+  # Postgres service
+  service:
+    type: ClusterIP
+    port: 5432
+
+  # Postgres resources
+  resources:
+    limits:
+      cpu: 2
+      memory: 2Gi
+    requests:
+      cpu: 100m
+      memory: 200Mi
+
+  # Postgres persistence
+  persistence:
+    enabled: true
+    accessMode: ReadWriteOnce
+    size: 8Gi
+    storageClass:
+    mountPath: /opt/sonar/pgsql
+
+  # Postgres Security context pod and container  
+  securityContext:
+    enabled: true
+    fsGroup: 1001
+    runAsUser: 1001
