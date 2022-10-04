@@ -68,3 +68,11 @@ spec:
 <p align="center">
   <img alt="rabbit" src="../../images/rabbitmq.png">
 </p>
+
+## Referências
+
+- https://www.rabbitmq.com/kubernetes/operator/install-operator.html
+- https://kubernetes.io/docs/tasks/configure-pod-container/assign-pods-nodes-using-node-affinity/
+- https://stackoverflow.com/questions/66171565/rabbitmq-cluster-operator-does-not-work-in-kubernetes
+- https://kubernetes.io/docs/concepts/storage/dynamic-provisioning/
+- https://github.com/danieleghione/Rabbitmq
